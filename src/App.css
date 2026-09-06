@@ -1,0 +1,193 @@
+/* #root {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.signup-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form-card {
+  background: rgb(18, 18, 18);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 230, 118, 0.05);
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  border: 1px solid rgb(34, 34, 34);
+}
+
+h2 {
+  margin-top: 0px;
+  margin-bottom: 4px;
+  color: rgb(0, 230, 118);
+  font-size: 28px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 0px;
+  margin-bottom: 32px;
+  color: rgb(170, 170, 170);
+  font-size: 15px;
+  text-align: center;
+}
+
+.field-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: rgb(0, 230, 118);
+  text-align: left;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid rgb(51, 51, 51);
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  background-color: rgb(30, 30, 30);
+  color: rgb(255, 255, 255);
+}
+
+input:focus {
+  border-color: rgb(0, 230, 118);
+  box-shadow: 0px 0px 8px rgba(0, 230, 118, 0.3);
+}
+
+.action-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: rgb(0, 230, 118);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+  background-color: rgb(0, 179, 89);
+}
+
+.banner {
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.banner.success {
+  background-color: rgb(27, 94, 32);
+  color: rgb(185, 246, 202);
+  border: 1px solid rgb(46, 125, 50);
+}
+
+.banner.error {
+  background-color: rgb(198, 40, 24);
+  color: rgb(255, 138, 128);
+  border: 1px solid rgb(211, 47, 47);
+} */
+
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background: #080c13;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: #080c13;
+}
+
+.app-content {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   Shot Left Desktop Grid Layout Systems Patch
+   ========================================================================== */
+
+/* This overrides desktop constraints to align with your dashboard grid rules */
+@media (min-width: 1001px) {
+  
+  .app-content {
+    width: calc(100% - 260px) !important; /* Forces content to stop overlapping behind sidebar */
+    margin-left: 260px !important;        /* Slides everything right of your fixed navigation pane */
+    padding-top: 80px;                     /* Shifts elements safely down under your search bar */
+    box-sizing: border-box;
+  }
+
+  .user-dashboard {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 24px 32px !important;
+    display: block !important;
+  }
+
+  /* Forces your layout columns to sit flat side-by-side on wide displays */
+  .dashboard-main-grid {
+    display: grid !important;
+    grid-template-columns: 1.5fr 1fr !important; /* Balanced layout columns alignment matrix */
+    gap: 24px !important;
+    align-items: start !important;
+    width: 100% !important;
+  }
+}
+
+
+

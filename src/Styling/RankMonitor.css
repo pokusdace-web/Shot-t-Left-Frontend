@@ -1,0 +1,168 @@
+/* .hf-monitor-wrapper {
+  padding: 24px;
+  background: var(--bg-deep);
+  min-height: 90vh;
+}
+.hf-monitor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.hf-monitor-header h2 {
+  font-size: 20px;
+}
+.refresh-icon {
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.hf-tab-row {
+  display: flex;
+  background: var(--bg-panel);
+  padding: 6px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border-subtle);
+}
+.hf-tab-row button {
+  flex: 1;
+  background: transparent;
+  color: var(--text-muted);
+  padding: 10px;
+  border-radius: 8px;
+}
+.hf-tab-row button.active {
+  background: var(--bg-card);
+  color: white;
+  border: 1px solid var(--border-subtle);
+}
+.hf-monitor-split {
+  display: flex;
+  gap: 20px;
+  height: 50vh;
+  margin-bottom: 20px;
+}
+.hf-map-pane {
+  flex: 2;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+.hf-list-pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+.hf-rank-row-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  padding: 16px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rank-info-main h4 {
+  font-size: 14px;
+}
+.rank-info-main p {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+.status-tag {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.status-tag.high { background: rgba(255,74,74,0.15); color: #FF4A4A; }
+.status-tag.medium { background: rgba(255,152,0,0.15); color: #FF9800; }
+.status-tag.low { background: rgba(0,230,118,0.15); color: #00E676; }
+
+.hf-monitor-summary-bar {
+  display: flex;
+  justify-content: space-around;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+}
+.hf-monitor-summary-bar strong {
+  font-size: 18px;
+  color: var(--accent-tan);
+}
+.hf-monitor-summary-bar p {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+} */
+
+
+
+
+/* Styling layout properties for Rank Monitor screen views */
+.hf-list-scroll-pane {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: calc(100vh - 210px);
+  overflow-y: auto;
+}
+
+.hf-rank-row-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  padding: 18px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hf-rank-row-card:hover {
+  border-color: var(--accent-tan);
+}
+
+.hf-rank-row-card.active-selection-border {
+  border-left: 4px solid var(--accent-tan);
+  background: var(--bg-card);
+}
+
+.rank-info-main h4 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.telemetry-pill-tag {
+  background: var(--bg-deep);
+  border: 1px solid var(--border-subtle);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  color: var(--accent-tan);
+}
+
+.status-tag {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.status-tag.high { background: rgba(255,74,74,0.12); color: #FF4A4A; }
+.status-tag.medium { background: rgba(255,152,0,0.12); color: #FF9800; }
+.status-tag.low { background: rgba(0,230,118,0.12); color: #00E676; }
+
+.hf-widescreen-map-card {
+  height: calc(100vh - 210px);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}

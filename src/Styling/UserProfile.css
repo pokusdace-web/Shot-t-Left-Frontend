@@ -1,0 +1,126 @@
+.hf-feature-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  padding: 20px;
+  background: var(--bg-deep);
+}
+
+.hf-feature-card {
+  background: var(--bg-panel);
+  padding: 36px;
+  border-radius: 24px;
+  border: 1px solid var(--border-subtle);
+  max-width: 440px;
+  width: 100%;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+}
+
+.profile-details-box, .history-stack, .saved-nodes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 24px 0;
+}
+
+.profile-item-row, .saved-node-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-card);
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border-subtle);
+}
+
+.profile-item-row label, .saved-node-row label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+  display: block;
+}
+
+.profile-item-row p, .saved-node-row h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-top: 2px;
+}
+
+.profile-icon, .node-icon-tan {
+  color: var(--accent-tan);
+}
+
+.security-notice-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(229, 186, 147, 0.05);
+  border: 1px solid var(--border-subtle);
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.history-item-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  padding: 16px;
+  border-radius: 14px;
+}
+
+.history-meta-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.badge-completed {
+  background: rgba(0, 230, 118, 0.1);
+  color: var(--accent-green);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.history-route {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.history-cost {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.add-new-node-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--accent-tan);
+  color: black;
+  font-weight: 700;
+  border-radius: 12px;
+}
+
+/* 📱 CORE GLOBAL RESPONSIVENESS MEDIA BREAKPOINTS */
+@media (max-width: 768px) {
+  .monitor-split-layout, .ride-split-container, .hf-book-split {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+  .monitor-left-panel, .ride-form-panel, .hf-book-controls, .hf-map-pane, .hf-book-map {
+    width: 100% !important;
+    flex: none !important;
+    height: 400px !important;
+  }
+  .hf-pay-split-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
