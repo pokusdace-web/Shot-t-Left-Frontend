@@ -1,4 +1,4 @@
-name: CI/CD Pipeline - Deploy Frontend to S3 Static Website
+name: CI/CD Pipeline
 
 on:
   push:
@@ -10,31 +10,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Source Code Repository
+    - name: Checkout Source Code
       uses: actions/checkout@v3
 
-    - name: Setup Node.js Runtime Environment
+    - name: Setup Node.js Environment
       uses: actions/setup-node@v3
       with:
         node-version: 18
-        cache: 'npm'
 
-
-    - name: Install Application Dependencies
+    - name: Install Dependencies
       run: npm install
 
-    - name: Compile and Build Optimized Static Production Assets
+    - name: Build Production Assets
       env:
         VITE_API_URL: http://51.21.215.154:3001
       run: npm run build
 
-    - name: Configure AWS Engine Identification Credentials
+    - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v2
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: eu-north-1
 
-    - name: Synchronize and Deploy Static Build Assets onto AWS S3 Static Bucket Nodes
-      # WARNING: Ensure 'shot-t-left-frontend-david' matches your chosen AWS S3 bucket name
+    - name: Deploy to S3 Bucket
       run: aws s3 sync ./dist s3://shot-t-left-frontend-david --delete
